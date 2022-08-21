@@ -41,17 +41,25 @@ const rows = [
 
 const studentSideBA1r = [
   {
-    Name:"Create Criteria",
-    url:'/moderator/criteria'
-},
-{
-    Name:"Create Merit List",
-    url:'/moderator/createml'
-},
-{
-    Name:"Students",
-    url:'/moderator/students'
-}
+		Name: "Criteria",
+		url: '/moderator/criteria'
+	  },
+	  {
+		Name: "Check Criteria",
+		url: '/moderator/checkcriteria'
+	  },
+	  {
+		Name: "Create Moderator",
+		url: '/moderator/createmoderator'
+	  },
+	  {
+		Name: "Create Merit List",
+		url: '/moderator/createml'
+	  },
+	  {
+		Name: "Students",
+		url: '/moderator/students'
+	  }
 ]
 
 function SimpleTable(props) {

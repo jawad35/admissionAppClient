@@ -22,17 +22,17 @@ function StudentForm() {
     const handleReset = () => setTextValue("");
     const studentSideBAr =[
 		{
-			Name:"Merit List",
-			url:'student/meritlist'
-		},
-		{
-			Name:"Form Fill",
-			url:'form'
-		},
-		{
-			Name:"Form List",
-			url:'formlist',
-		}
+            Name:"Merit List",
+            url:'/student/meritlist'
+        },
+        {
+            Name:"Form Fill",
+            url:'/student/form'
+        },
+        {
+            Name:"Form List",
+            url:'/student/formlist',
+        }
 	]
     return (
         <div className={styles.container}>

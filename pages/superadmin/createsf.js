@@ -13,7 +13,22 @@ import Header from "../components/Header";
 import LeftNavbar from "../components/LeftNavbar";
 // own css files here
 const studentSideBAr = [
-    
+    {
+        Name:"Create Static Form",
+        url:'/superadmin/createsf'
+    },
+    {
+        Name:"Create Board Admin",
+        url:'/superadmin/boardadmin'
+    },
+    {
+        Name:"Create Admin",
+        url:'/superadmin/createadmin'
+    },
+    {
+        Name:"Manage Universties",
+        url:'/superadmin/manageu'
+    }
 ]
 function StudentForm() {
     const [textValue, setTextValue] = useState("");

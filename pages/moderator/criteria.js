@@ -11,18 +11,18 @@ import LeftNavbar from '../components/LeftNavbar'
 import Header from '../components/Header'
 import Head from "next/head";
 import { Input } from '@material-ui/core';
-const adminSideBAr =[
+const adminSideBAr = [
   {
-      Name:"Create Criteria",
-      url:'/moderator/criteria'
+    Name: "Create Criteria",
+    url: '/moderator/criteria'
   },
   {
-      Name:"Create Merit List",
-      url:'/moderator/createml'
+    Name: "Create Merit List",
+    url: '/moderator/createml'
   },
   {
-      Name:"Students",
-      url:'/moderator/students'
+    Name: "Students",
+    url: '/moderator/students'
   }
 ]
 const styles = theme => ({
@@ -37,31 +37,39 @@ const styles = theme => ({
 })
 
 let id = 0;
-function createData( number, subject, percentage) {
+function createData(subject, percentage) {
   id += 1;
-  return { id,  number, subject, percentage};
+  return { subject, percentage };
 }
 
 const rows = [
-  createData(64, 'Pak Study', '64%'),
-  createData(70, 'Urdu','70%'),
-  createData(89, 'English', '89%'),
-  createData(90, 'math', '90%'),
+  createData('Computer Science', '64%'),
+  createData('Information Technology', '70%'),
+  createData('Software engineering', '75%'),
+  createData('Medical', '90%'),
 ];
 
-const moderatorSideBAr =[
+const moderatorSideBAr = [
   {
-      Name:"Create Criteria",
-      url:'/moderator/criteria'
-  },
-  {
-      Name:"Create Merit List",
-      url:'/moderator/createml'
-  },
-  {
-      Name:"Students",
-      url:'/moderator/students'
-  }
+		Name: "Criteria",
+		url: '/moderator/criteria'
+	  },
+	  {
+		Name: "Check Criteria",
+		url: '/moderator/checkcriteria'
+	  },
+	  {
+		Name: "Create Moderator",
+		url: '/moderator/createmoderator'
+	  },
+	  {
+		Name: "Create Merit List",
+		url: '/moderator/createml'
+	  },
+	  {
+		Name: "Students",
+		url: '/moderator/students'
+	  }
 ]
 
 function SimpleTable(props) {
@@ -69,30 +77,28 @@ function SimpleTable(props) {
 
   return (
     <div className={styles.container}>
-    <LeftNavbar SideBarList={moderatorSideBAr} />
-    <Header />
-    
-    <Paper className={classes.root}>
-        <h1 style={{textAlign:'center'}}>Criteria</h1>
-      <Table className={classes.table}>
-        <TableHead>
-          <TableRow>
-            <TableCell align="right">Number</TableCell>
-            <TableCell align="right">Subject</TableCell>
-            <TableCell align="right">Percentage</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.id}>
-              <TableCell align="right">{row.number}</TableCell>
-              <TableCell align="right">{row.subject}</TableCell>
-              <TableCell align="right">{row.percentage}</TableCell>
+      <LeftNavbar SideBarList={moderatorSideBAr} />
+      <Header />
+
+      <Paper className={classes.root}>
+        <h1 style={{ textAlign: 'center' }}>Criteria</h1>
+        <Table className={classes.table}>
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">Subject</TableCell>
+              <TableCell align="right">Percentage</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Paper>
+          </TableHead>
+          <TableBody>
+            {rows.map(row => (
+              <TableRow key={row.id}>
+                <TableCell align="center">{row.subject}</TableCell>
+                <TableCell align="right">{row.percentage}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Paper>
     </div>
   );
 }

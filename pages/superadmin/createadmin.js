@@ -90,6 +90,10 @@ export default function Admin() {
             url:'/superadmin/createsf'
         },
         {
+            Name:"Create Board Admin",
+            url:'/superadmin/boardadmin'
+        },
+        {
             Name:"Create Admin",
             url:'/superadmin/createadmin'
         },

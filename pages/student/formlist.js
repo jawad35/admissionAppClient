@@ -73,15 +73,15 @@ const style = {
 const studentSideBAr =[
     {
         Name:"Merit List",
-        url:'/meritlist'
+        url:'/student/meritlist'
     },
     {
         Name:"Form Fill",
-        url:'form'
+        url:'/student/form'
     },
     {
         Name:"Form List",
-        url:'formlist',
+        url:'/student/formlist',
     }
 ]
 
@@ -123,7 +123,7 @@ export default function Admin() {
                 <Header />
 
                 <div className={styles.contentcontainer}>
-                    <h1 variant="contained" style={{ margin: '10px', textAlign:'center' }}>Merit List</h1>
+                    <h1 variant="contained" style={{ margin: '10px', textAlign:'center' }}>Form List</h1>
                     <Button  variant="contained" style={{ margin: '10px' }}>Edit Form</Button>
                     <Button  variant="contained" style={{ margin: '10px' }}>Delete Form</Button>
                     <div>

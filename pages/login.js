@@ -18,7 +18,7 @@ const Login = () => {
     if (Password === "123456" && Email === "student@gmail.com") {
       window.location.href = "/admin/student"
     } else if (Password === "123456" && Email === "moderator@gmail.com") {
-      window.location.href = "/moderator/createml"
+      window.location.href = "/moderator/createmoderator"
     }
     else if (Password === "123456" && Email === "admin@gmail.com") {
       window.location.href = "/student/form"

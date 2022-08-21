@@ -41,10 +41,10 @@ function createData(No, code, Actions) {
 }
 
 const rows = [
-    createData('1', 'University 1', <><Delete onClick={() => alert('delete')} /><Edit /></>),
+    createData('1', 'University 1', <><Delete /><Edit /></>),
+    createData('1', 'University 1', <><Delete /><Edit /></>),
     createData('2', 'University 2', <><Delete /><Edit /></>),
     createData('3', 'University 3', <><Delete /><Edit /></>),
-    createData('4', 'University 4', <><Delete /><Edit /></>),
 ];
 
 const style = {
@@ -59,7 +59,24 @@ const style = {
     p: 4,
 };
 
-const adminSideBAr = []
+const adminSideBAr = [
+    {
+        Name:"Create Static Form",
+        url:'/superadmin/createsf'
+    },
+    {
+        Name:"Create Board Admin",
+        url:'/superadmin/boardadmin'
+    },
+    {
+        Name:"Create Admin",
+        url:'/superadmin/createadmin'
+    },
+    {
+        Name:"Manage Universties",
+        url:'/superadmin/manageu'
+    }
+]
 
 export default function Admin() {
     const [page, setPage] = React.useState(0);
@@ -86,6 +103,10 @@ export default function Admin() {
         {
             Name:"Create Static Form",
             url:'/superadmin/createsf'
+        },
+        {
+            Name:"Create Board Admin",
+            url:'/superadmin/boardadmin'
         },
         {
             Name:"Create Admin",
